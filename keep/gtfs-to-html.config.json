@@ -1,0 +1,21 @@
+{
+	"agencies": [
+		{
+			"agencyKey": "pezinok-mhd",
+			"path": "./fragment/pezinok"
+		},
+		{
+			"agencyKey": "malacky-mhd",
+			"path": "./fragment/malacky"
+		},
+		{
+			"agencyKey": "topolcany-mhd",
+			"path": "./fragment/topolcany"
+		}
+	],
+	"outputPath": "./fragment/html",
+	"outputFormat": "html",
+	"mapStyleUrl": "https://tiles.openfreemap.org/styles/bright",
+	"showMap": true,
+	"timeFormat": "hh:mm"
+}

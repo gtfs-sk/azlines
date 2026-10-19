@@ -1,0 +1,1028 @@
+{
+	"objectIdFieldName": "OBJECTID",
+	"uniqueIdField": {
+		"name": "OBJECTID",
+		"isSystemMaintained": true
+	},
+	"globalIdFieldName": "",
+	"geometryType": "esriGeometryPoint",
+	"spatialReference": {
+		"wkid": 4326,
+		"latestWkid": 4326
+	},
+	"fields": [
+		{
+			"name": "OBJECTID",
+			"type": "esriFieldTypeOID",
+			"alias": "OBJECTID",
+			"sqlType": "sqlTypeOther",
+			"domain": null,
+			"defaultValue": null
+		},
+		{
+			"name": "gid",
+			"type": "esriFieldTypeInteger",
+			"alias": "gid",
+			"sqlType": "sqlTypeOther",
+			"domain": null,
+			"defaultValue": null
+		},
+		{
+			"name": "názov_zastávky",
+			"type": "esriFieldTypeString",
+			"alias": "nazov",
+			"sqlType": "sqlTypeOther",
+			"length": 254,
+			"domain": null,
+			"defaultValue": null
+		},
+		{
+			"name": "spoje",
+			"type": "esriFieldTypeString",
+			"alias": "spoje",
+			"sqlType": "sqlTypeOther",
+			"length": 254,
+			"domain": null,
+			"defaultValue": null
+		},
+		{
+			"name": "popis",
+			"type": "esriFieldTypeString",
+			"alias": "popis",
+			"sqlType": "sqlTypeOther",
+			"length": 254,
+			"domain": null,
+			"defaultValue": null
+		},
+		{
+			"name": "pristr",
+			"type": "esriFieldTypeInteger",
+			"alias": "pristr",
+			"sqlType": "sqlTypeOther",
+			"domain": null,
+			"defaultValue": null
+		},
+		{
+			"name": "kos",
+			"type": "esriFieldTypeInteger",
+			"alias": "kos",
+			"sqlType": "sqlTypeOther",
+			"domain": null,
+			"defaultValue": null
+		},
+		{
+			"name": "p_miest",
+			"type": "esriFieldTypeInteger",
+			"alias": "p_miest",
+			"sqlType": "sqlTypeOther",
+			"domain": null,
+			"defaultValue": null
+		},
+		{
+			"name": "stav",
+			"type": "esriFieldTypeString",
+			"alias": "stav",
+			"sqlType": "sqlTypeOther",
+			"length": 255,
+			"domain": null,
+			"defaultValue": null
+		}
+	],
+	"features": [
+		{
+			"attributes": {
+				"OBJECTID": 1,
+				"gid": 49,
+				"názov_zastávky": "Pezinok, Žel. stanica ",
+				"spoje": "1,2,3,4,5,24",
+				"popis": "zastavka C",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 4,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.270019785627447,
+				"y": 48.28269073785065
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 2,
+				"gid": 12,
+				"názov_zastávky": "Pezinok, Fándlyho",
+				"spoje": "4,5,24",
+				"popis": "Bratislavska",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 4,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.262665132802535,
+				"y": 48.282138068877394
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 3,
+				"gid": 14,
+				"názov_zastávky": "Pezinok, Jesenského",
+				"spoje": "4,5,24",
+				"popis": "medzimestský smer Myjava",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 2,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.26793310320578,
+				"y": 48.283492202927185
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 4,
+				"gid": 16,
+				"názov_zastávky": "Pezinok, Radničné námestie",
+				"spoje": "11,22,33",
+				"popis": "zastavka C",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 4,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.269043260038455,
+				"y": 48.28599071300023
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 5,
+				"gid": 52,
+				"názov_zastávky": "Pezinok, Radničné námestie",
+				"spoje": "1,2,3,4,24",
+				"popis": "zastavka A",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.26943606963014,
+				"y": 48.285682574096434
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 6,
+				"gid": 18,
+				"názov_zastávky": "Pezinok, Trhovisko",
+				"spoje": "1,3,4",
+				"popis": "Kupeckeho",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.265373169445624,
+				"y": 48.29032498459631
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 7,
+				"gid": 17,
+				"názov_zastávky": "Pezinok, Trhovisko",
+				"spoje": "11,33",
+				"popis": "Kupeckeho",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.265506785664112,
+				"y": 48.28993937571743
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 8,
+				"gid": 7,
+				"názov_zastávky": "Pezinok, ZŠ Kupeckého",
+				"spoje": "11,33,4,24",
+				"popis": "Kupeckého",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 3,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.26196016649165,
+				"y": 48.293861156207576
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 9,
+				"gid": 6,
+				"názov_zastávky": "Pezinok, Suvorovova",
+				"spoje": "11,33,4,24",
+				"popis": "Suvorovova",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.262712562405493,
+				"y": 48.29608233246579
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 10,
+				"gid": 53,
+				"názov_zastávky": "Pezinok, Suvorovova",
+				"spoje": "1,3,4",
+				"popis": "Suvorovova",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.262848898651782,
+				"y": 48.296081694266626
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 11,
+				"gid": 5,
+				"názov_zastávky": "Pezinok, Sídlisko Sever",
+				"spoje": "1,3,4,11,33,24",
+				"popis": "Svätopluková",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 4,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.264529176770928,
+				"y": 48.29878905106603
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 12,
+				"gid": 4,
+				"názov_zastávky": "Pezinok, L. Novomeského",
+				"spoje": "11,22",
+				"popis": "Laca Novomeského (Cajla)",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 2,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.269888383160524,
+				"y": 48.299766414637304
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 13,
+				"gid": 56,
+				"názov_zastávky": "Pezinok, L. Novomeského",
+				"spoje": "1,2",
+				"popis": "Laca Novomeského (Cajla)",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.27028599402491,
+				"y": 48.30002690198528
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 14,
+				"gid": 57,
+				"názov_zastávky": "Pezinok, Dr. Bokesa",
+				"spoje": "11,22",
+				"popis": "Dr. Bokesa",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 2,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.270562261875902,
+				"y": 48.30296598309344
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 15,
+				"gid": 3,
+				"názov_zastávky": "Pezinok, Dr. Bokesa",
+				"spoje": "1,2",
+				"popis": "Dr. Bokesa",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.270966837692487,
+				"y": 48.30401823042889
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 16,
+				"gid": 2,
+				"názov_zastávky": "Pezinok, Cintorín Cajla",
+				"spoje": "1,2",
+				"popis": "Cajlanska",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 4,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.27077198360977,
+				"y": 48.30782912420759
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 17,
+				"gid": 61,
+				"názov_zastávky": "Pezinok, Cintorín Cajla",
+				"spoje": "11,22",
+				"popis": "Cintorín Cajla",
+				"pristr": 1,
+				"kos": 1,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.27060953523223,
+				"y": 48.30772417802986
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 18,
+				"gid": 1,
+				"názov_zastávky": "Pezinok, Zumberg",
+				"spoje": "11,22",
+				"popis": "Malacká cesta",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 4,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.261313845870724,
+				"y": 48.31464902208712
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 19,
+				"gid": 24,
+				"názov_zastávky": "Pezinok, Zumberg",
+				"spoje": "1,2",
+				"popis": "Malacka cesta",
+				"pristr": 1,
+				"kos": 1,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.261303424901428,
+				"y": 48.31485724547855
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 20,
+				"gid": 22,
+				"názov_zastávky": "Pezinok, Nemocnica",
+				"spoje": "11,22,33",
+				"popis": "Malacká cesta",
+				"pristr": 1,
+				"kos": 1,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.25595170354444,
+				"y": 48.31636383368327
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 21,
+				"gid": 33,
+				"názov_zastávky": "Pezinok, Žel. stanica_vystup",
+				"spoje": "",
+				"popis": "výstupište",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.269866882149145,
+				"y": 48.282860659021516
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 22,
+				"gid": null,
+				"názov_zastávky": "Pezinok, ZŠ Kupeckého",
+				"spoje": "1,3,4",
+				"popis": "ZŠ Kupeckého",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.262249301591105,
+				"y": 48.29380685080015
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 23,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Majakovského",
+				"spoje": "4,24",
+				"popis": "Gorkého",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.254700586042418,
+				"y": 48.28978212711639
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 24,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Komenského (škola)",
+				"spoje": "4",
+				"popis": "Komenského",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.256817497772044,
+				"y": 48.28441362026519
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 25,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Kučišdorf - stojisko",
+				"spoje": "33",
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.25863032887536,
+				"y": 48.32953282171824
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 26,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Pod priehradou",
+				"spoje": "33",
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.260142876678888,
+				"y": 48.32293501010559
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 27,
+				"gid": 21,
+				"názov_zastávky": "Pezinok, Šenkvická",
+				"spoje": "22",
+				"popis": "Šenkvická",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.277429351274492,
+				"y": 48.292206142746956
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 28,
+				"gid": 20,
+				"názov_zastávky": "Pezinok, Trnavská",
+				"spoje": "2,24",
+				"popis": "Trnavska",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 2,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.270994240769294,
+				"y": 48.29140128940291
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 29,
+				"gid": 19,
+				"názov_zastávky": "Pezinok, Trnavská",
+				"spoje": "22",
+				"popis": "Trnavska",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 4,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.270265558632627,
+				"y": 48.29121541786184
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 30,
+				"gid": 54,
+				"názov_zastávky": "Pezinok, Amfiteáter",
+				"spoje": "22",
+				"popis": "Amfiteáter",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.26895494912857,
+				"y": 48.29656705469832
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 31,
+				"gid": 55,
+				"názov_zastávky": "Pezinok, Amfiteáter",
+				"spoje": "2,24",
+				"popis": "Amfiteáter",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.269234568853182,
+				"y": 48.29709479063463
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 32,
+				"gid": 23,
+				"názov_zastávky": "Pezinok, gen. Pekníka",
+				"spoje": "22",
+				"popis": "Gen. Pekníka\n",
+				"pristr": 1,
+				"kos": 1,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.272306069542502,
+				"y": 48.294977088734406
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 33,
+				"gid": 58,
+				"názov_zastávky": "Pezinok, Sídlisko Muškát",
+				"spoje": "2,24",
+				"popis": "Sídlisko Muškát",
+				"pristr": 1,
+				"kos": 0,
+				"p_miest": 0,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.275657453563458,
+				"y": 48.29566480589566
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 34,
+				"gid": 59,
+				"názov_zastávky": "Pezinok, Sídlisko Muškát",
+				"spoje": "22",
+				"popis": "Sídlisko Muškát",
+				"pristr": 0,
+				"kos": 0,
+				"p_miest": 4,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.27536911606232,
+				"y": 48.295419668322104
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 35,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Komenského ZOS",
+				"spoje": "4",
+				"popis": "Komenského",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.258940802889597,
+				"y": 48.28242610579209
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 36,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Pod priehradou",
+				"spoje": "3",
+				"popis": "Pod Kalvariou",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.260324075508745,
+				"y": 48.32294414740386
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 37,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Šenkvická",
+				"spoje": "2,24",
+				"popis": "Šenkvická",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.278275144689484,
+				"y": 48.29211051071297
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 38,
+				"gid": null,
+				"názov_zastávky": "Pezinok, gen. Pekníka",
+				"spoje": "2,24",
+				"popis": "gen Pekníka",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.272348487958567,
+				"y": 48.2950292974623
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 39,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Žarnovických",
+				"spoje": "3",
+				"popis": "Panský chodník",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.264629982872318,
+				"y": 48.30322669648852
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 40,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Kutuzovova",
+				"spoje": "3",
+				"popis": "Kutuzovova",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.25927092925723,
+				"y": 48.312064729565115
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 41,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Okružná - LIDL",
+				"spoje": "24",
+				"popis": "Okružná",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.25665309325788,
+				"y": 48.27951844036504
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 42,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Kaufland",
+				"spoje": "5",
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.25390108494255,
+				"y": 48.274989070359375
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 43,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Kaufland",
+				"spoje": "5",
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.254617905302,
+				"y": 48.27533628297134
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 44,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Limbašská cesta",
+				"spoje": null,
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.252002080958473,
+				"y": 48.2752153390005
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 45,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Limbašská cesta",
+				"spoje": null,
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.25162992445756,
+				"y": 48.27536573791759
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 46,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Starý mlyn",
+				"spoje": null,
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.24272297886581,
+				"y": 48.28088020790453
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 47,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Starý mlyn",
+				"spoje": null,
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.242642512595356,
+				"y": 48.28084986365982
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 48,
+				"gid": null,
+				"názov_zastávky": "Limbach, Mlynské pole",
+				"spoje": null,
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.237560397061607,
+				"y": 48.284102842578605
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 49,
+				"gid": null,
+				"názov_zastávky": "Limbach, Mlynské pole",
+				"spoje": null,
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.237546986016543,
+				"y": 48.284004229938944
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 50,
+				"gid": null,
+				"názov_zastávky": "Grinava, Myslenická",
+				"spoje": "5",
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.25020199926647,
+				"y": 48.2715777611315
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 51,
+				"gid": null,
+				"názov_zastávky": "Grinava, Štúrova",
+				"spoje": "5",
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.24757544608747,
+				"y": 48.270587367416425
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 52,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Fajgalská",
+				"spoje": null,
+				"popis": null,
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.233843884796727,
+				"y": 48.29009534931743
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 53,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Fándlyho",
+				"spoje": "4,5",
+				"popis": "Bratislavska",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.262389957036813,
+				"y": 48.2821888102518
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 54,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Sídlisko Juh",
+				"spoje": "4,5",
+				"popis": "Bratislavská",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.258397488915772,
+				"y": 48.2790454882349
+			}
+		},
+		{
+			"attributes": {
+				"OBJECTID": 55,
+				"gid": null,
+				"názov_zastávky": "Pezinok, Sídlisko Juh",
+				"spoje": "4,5,24",
+				"popis": "Bratislavská",
+				"pristr": null,
+				"kos": null,
+				"p_miest": null,
+				"stav": "existujúca"
+			},
+			"geometry": {
+				"x": 17.25858658465141,
+				"y": 48.27891428915879
+			}
+		}
+	]
+}

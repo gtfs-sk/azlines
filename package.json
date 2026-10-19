@@ -1,0 +1,33 @@
+{
+  "name": "bearingbasedplatforming",
+  "version": "0.1.0",
+  "description": "Pick the right-hand-side item along a bearing (e.g. the correct bus platform given a route's direction of travel).",
+  "module": "index.ts",
+  "main": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "typecheck": "bun check",
+    "unpack:feed": "bash fetch/unpackFeed.sh",
+    "transform:pezinok": "bun run transform/pezinok/index.ts",
+    "transform:malacky": "bun run transform/malacky/index.ts",
+    "transform:topolcany": "bun run transform/topolcany/index.ts",
+    "fetch:platforms": "bun run fetch/arcgisPlatforms.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "@types/papaparse": "^5.5.2",
+    "papaparse": "^5.7.0",
+    "string-similarity-js": "^2.1.4",
+    "tiny-osmpbf": "^1.0.0-beta.1"
+  }
+}
