@@ -37,11 +37,18 @@ export function nearestCandidate<T>(stop: LatLon, candidates: Platform<T>[]): Pl
  * candidate sits physically closest to it (null if none matched), so a feed
  * can pull in extra metadata (e.g. wheelchair accessibility from OSM tags)
  * without affecting which platform gets picked.
+ *
+ * `enrichStopTime`, if given, is applied to every output stop_time row —
+ * since this function already owns the stop_times mapper (to repoint rows
+ * onto split platforms), a feed that needs its own per-row stop_time tweaks
+ * (e.g. cleaning up stop_headsign) must hook in here rather than adding a
+ * second mapper("stop_times", ...) call, which would throw.
  */
 export function correctPlatforms<T>(
 	m: Manipulate<any>,
 	candidatesFor: (stopName: string) => Platform<T>[],
 	enrichStop?: (stop: Stop, match: Platform<T> | null) => Stop,
+	enrichStopTime?: (stopTime: StopTime) => StopTime,
 ) {
 	const stopTimesByTrip = new Map<string, StopTime[]>()
 	for (const st of m.baseFeed.stop_times) {
@@ -127,6 +134,7 @@ export function correctPlatforms<T>(
 
 	m.mapper("stop_times", (st) => {
 		const platform = platformAssignment.get(`${st.trip_id}#${st.stop_sequence}`)
-		return platform ? { ...st, stop_id: `P${platform.id}` } : st
+		const result = platform ? { ...st, stop_id: `P${platform.id}` } : st
+		return enrichStopTime ? enrichStopTime(result) : result
 	})
 }

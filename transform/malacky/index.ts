@@ -13,23 +13,28 @@ const m = new Manipulate({
 const platforms = loadMalackyPlatforms()
 const stopProps = loadStopProps()
 
-correctPlatforms(m, (stopName) => candidatesFor(stopName, platforms), (stop, match) => {
-	const props = stopProps.get(stop.stop_name ?? "")
-	stop.stop_name = (props?.stop_name ?? stop.stop_name)
-		.replace("Malacky,", "")
-		.replace("MA,", "")
-	if (props?.tts_stop_name) stop.tts_stop_name = props.tts_stop_name
+correctPlatforms(
+	m,
+	(stopName) => candidatesFor(stopName, platforms),
+	(stop, match) => {
+		const props = stopProps.get(stop.stop_name ?? "")
+		stop.stop_name = (props?.stop_name ?? stop.stop_name ?? "")
+			.replace("Malacky,", "")
+			.replace("MA,", "")
+		if (props?.tts_stop_name) stop.tts_stop_name = props.tts_stop_name
 
-	const wheelchair = match?.attributes?.tags.wheelchair
-	return {
-		...stop,
-		wheelchair_boarding:
-			wheelchair === "yes" || wheelchair === "designated" ? "1" :
-			wheelchair === "no" ? "2" :
-			stop.wheelchair_boarding,
-		platform_code: match?.attributes?.tags.local_ref ?? stop.platform_code,
-	}
-})
+		const wheelchair = match?.attributes?.tags.wheelchair
+		return {
+			...stop,
+			wheelchair_boarding:
+				wheelchair === "yes" || wheelchair === "designated" ? "1" :
+				wheelchair === "no" ? "2" :
+				stop.wheelchair_boarding,
+			platform_code: match?.attributes?.tags.local_ref ?? stop.platform_code,
+		}
+	},
+	(st) => (st.stop_headsign ? { ...st, stop_headsign: st.stop_headsign.replace("MA,", "").trim() } : st),
+)
 
 m.mapper("agency", (row) => mapAzLinesAgency(row))
 m.mapper("routes", (_route) => {
@@ -56,13 +61,6 @@ m.copy("trips")
 m.copy("calendar")
 m.copy("calendar_dates")
 m.copy("feed_info")
-
-m.mapper("stop_times", (st) => {
-	if (st.stop_headsign) {
-		st.stop_headsign = st.stop_headsign.replace("MA,", "").trim()
-	}
-	return st
-})
 
 m.addAtribution({
 	organization_name: "OpenStreetMap contributors",

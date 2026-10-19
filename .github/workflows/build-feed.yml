@@ -105,8 +105,47 @@ jobs:
           name: gtfs-feed-${{ matrix.city }}
           path: public
 
+  gtfs-to-html:
+    needs: pfaedle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.2
+
+      - name: Download pezinok pfaedled artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pfaedled-pezinok
+          path: fragment/pezinok
+
+      - name: Download malacky pfaedled artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pfaedled-malacky
+          path: fragment/malacky
+
+      - name: Download topolcany pfaedled artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pfaedled-topolcany
+          path: fragment/topolcany
+
+      - name: Build HTML timetables
+        run: bunx gtfs-to-html --configPath ./keep/gtfs-to-html.config.json
+
+      - name: Upload HTML timetables artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gtfs-to-html
+          path: fragment/html
+
   deploy:
-    needs: package
+    needs: [package, gtfs-to-html]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -118,6 +157,12 @@ jobs:
           pattern: gtfs-feed-*
           path: fragment
           merge-multiple: true
+
+      - name: Download HTML timetables artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: gtfs-to-html
+          path: fragment/html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
