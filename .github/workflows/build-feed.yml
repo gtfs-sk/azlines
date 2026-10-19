@@ -21,7 +21,22 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  fetch-osm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Slovakia OSM extract
+        run: |
+          mkdir -p tmp
+          curl -fsSL https://download.geofabrik.de/europe/slovakia-latest.osm.pbf -o tmp/slovakia-latest.osm.pbf
+
+      - name: Upload OSM extract artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: osm-extract
+          path: tmp/slovakia-latest.osm.pbf
+
   build:
+    needs: fetch-osm
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -41,10 +56,11 @@ jobs:
       - name: Unpack base feed
         run: bash fetch/unpackFeed.sh ${{ matrix.city }}
 
-      - name: Download Slovakia OSM extract
-        run: |
-          mkdir -p tmp
-          curl -fsSL https://download.geofabrik.de/europe/slovakia-latest.osm.pbf -o tmp/slovakia-latest.osm.pbf
+      - name: Download OSM extract artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: osm-extract
+          path: tmp
 
       - name: Transform feed
         run: bun run transform/${{ matrix.city }}/index.ts
@@ -53,12 +69,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pre-pfaedle-${{ matrix.city }}
-          path: |
-            data/${{ matrix.city }}
-            tmp/slovakia-latest.osm.pbf
+          path: data/${{ matrix.city }}
 
   pfaedle:
-    needs: build
+    needs: [fetch-osm, build]
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -71,6 +85,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: pre-pfaedle-${{ matrix.city }}
+          path: data/${{ matrix.city }}
+
+      - name: Download OSM extract artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: osm-extract
+          path: tmp
 
       - name: Run pfaedle
         run: pfaedle -x tmp/slovakia-latest.osm.pbf data/${{ matrix.city }} -F --inplace --mots bus --drop-shapes true
