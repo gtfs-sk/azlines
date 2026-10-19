@@ -36,7 +36,7 @@ jobs:
           bun-version: 1.2.2
 
       - name: Install dependencies
-        run: bun install --frozen-lockfile
+        run: bun install
 
       - name: Unpack base feed
         run: bash fetch/unpackFeed.sh ${{ matrix.city }}
