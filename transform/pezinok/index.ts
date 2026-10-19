@@ -62,8 +62,9 @@ const routeLongNames: Record<string, string> = {
 	"V 55": "Nemocnica — Železničná stanica — Grinava",
 	V33: "Kučišdorfská dolina — Sídlisko Sever — Železničná stanica",
 }
-m.mapper("routes", (route) => ({
+m.mapper("routes", (route, meta) => ({
 	...route,
+	agency_id: meta.changedIdsMap.agency?.[route.agency_id ?? ""] ?? route.agency_id,
 	route_long_name: routeLongNames[route.route_short_name ?? ""] ?? route.route_long_name,
 }))
 m.copy("trips")

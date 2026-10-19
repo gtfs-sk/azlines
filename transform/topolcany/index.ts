@@ -39,7 +39,10 @@ m.mapper("stops", (stop) => {
 m.copy("stop_times")
 
 m.mapper("agency", (row) => mapAzLinesAgency(row))
-m.copy("routes")
+m.mapper("routes", (route, meta) => ({
+	...route,
+	agency_id: meta.changedIdsMap.agency?.[route.agency_id ?? ""] ?? route.agency_id,
+}))
 m.mapper("trips", (trip) => {
 	trip.trip_headsign = trip.trip_headsign?.replace("Topoľčany,", "").trim()
 	return trip

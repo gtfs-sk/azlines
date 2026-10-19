@@ -37,8 +37,9 @@ correctPlatforms(
 )
 
 m.mapper("agency", (row) => mapAzLinesAgency(row))
-m.mapper("routes", (_route) => {
+m.mapper("routes", (_route, meta) => {
 	let route = { ..._route }
+	route.agency_id = meta.changedIdsMap.agency?.[route.agency_id ?? ""] ?? route.agency_id
 	route.route_text_color = "FFFFFF"
 	switch (route.route_short_name) {
 		case "A":
