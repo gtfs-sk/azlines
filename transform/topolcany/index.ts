@@ -8,7 +8,11 @@ const m = new Manipulate({
 	feedId: "TOPOLCANY_MHD",
 	baseFeedPath: "./tmp/topolcany/feed",
 	outFeedPath: "./data/topolcany",
-})
+}).setupMetadata("keptIDs", {
+		routes: new Set<string>(),
+		fareMedia: new Set<string>(),
+		fareProducts: new Set<string>(),
+	})
 
 const platforms = loadTopolcanyPlatforms()
 const stopProps = loadStopProps()
@@ -50,6 +54,65 @@ m.mapper("trips", (trip) => {
 m.copy("calendar")
 m.copy("calendar_dates")
 m.copy("feed_info")
+
+m.add("fare_attributes", () => [
+	{
+		fare_id: "1",
+		price: "0.60",
+		currency_type: "EUR",
+		payment_method: "0",
+		transfers: "0",
+	},
+])
+
+m.add("fare_rules", (meta) => {
+	return [...meta.keptIDs.routes.values()].map(route_id => ({
+		fare_id: "1",
+		route_id,
+	}))
+})
+
+m.add("fare_media", (meta) => {
+	let res = [
+		{
+			fare_media_id: "cash",
+			fare_media_name: "Hotovosť",
+			fare_media_type: "0",
+		},
+		{
+			fare_media_id: "transit-card",
+			fare_media_name: "Dopravná karta",
+			fare_media_type: "1",
+		},
+		// {
+		// 	fare_media_id: "cyril-nicl",
+		// 	fare_media_name: "Aplikácia Cyril (NICL)",
+		// 	fare_media_type: "2",
+		// }
+	]
+	res.map(r => r.fare_media_id).forEach(e => meta.keptIDs.fareMedia.add(e))
+	return res
+})
+
+m.add("fare_products", (meta) => {
+	return [...meta.keptIDs.fareMedia.values()].map((fare_media_id, i) => {
+		const fare_product_id = "cestovne" + i
+		meta.keptIDs.fareProducts.add(fare_product_id)
+		return {
+			fare_product_id,
+			fare_product_name: "Cestovné",
+			fare_media_id,
+			amount: "0.60",
+			currency: "EUR",
+		}
+	})
+})
+
+m.add("fare_leg_rules", (meta) => {
+	return [...meta.keptIDs.fareProducts.values()].map((fare_product_id) => ({
+		fare_product_id,
+	}))
+})
 
 m.addAtribution({
 	organization_name: "OpenStreetMap contributors",
