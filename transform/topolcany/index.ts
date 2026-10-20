@@ -55,5 +55,10 @@ m.addAtribution({
 	organization_name: "OpenStreetMap contributors",
 	attribution_url: "https://www.openstreetmap.org/copyright",
 })
+m.addAtribution({
+	organization_name: "AZ - Lines s.r.o.",
+	attribution_url: "https://www.az-lines.sk",
+	attribution_notes: "Original feed provider",
+})
 
 m.saveFeed()
