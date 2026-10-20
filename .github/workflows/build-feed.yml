@@ -118,7 +118,7 @@ jobs:
       - name: Package GTFS feed
         run: |
           mkdir -p public
-          (cd data/${{ matrix.city }} && zip -r ../../public/${{ matrix.city }}-gtfs.zip .)
+          (cd data/${{ matrix.city }} && zip -r ../../public/${{ matrix.city }}.zip .)
 
       - name: Upload feed artifact
         uses: actions/upload-artifact@v4
@@ -183,7 +183,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: gtfs-to-html
-          path: fragment/html
+          path: fragment
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
